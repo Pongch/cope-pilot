@@ -51,7 +51,7 @@ def generate_context_string(language_key):
         """
     }
 
-    return prompt + '\n' + fewshotsies.get(language_key.lower(), f"Few Shots example not available for language {language_key}")
+    return prompt + '\n' + fewshots.get(language_key.lower(), f"Few Shots example not available for language {language_key}")
 
 
 def get_preloaded_context(language):
