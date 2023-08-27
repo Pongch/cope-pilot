@@ -103,7 +103,7 @@ def save_code_snippet(code_snippet, output_file_path):
 @click.option('--task', prompt='Enter a task description', help='The task description in natural language.')
 @click.option('--file-path', default=None, help='The path to a local file for context (optional).')
 @click.option('--output', default=None, help='The output file name and location (optional).')
-def main(language, task, file_path, output):
+def gen_code(language, task, file_path, output):
     gpt_token = load_gpt_token()
     if not gpt_token:
         click.echo("GPT_TOKEN environment variable not found. Please set it and try again.")
@@ -123,6 +123,6 @@ def main(language, task, file_path, output):
     else:
         click.echo(gpt3_response)
 
-if __name__ == '__main__':
-    main()
+# if __name__ == '__main__':
+#     main()
 
